@@ -10,7 +10,7 @@ if (isset($_POST["listarNombre"])) {
     $resultado = $conn->query($sql);
     if ($conn->affected_rows >= 1) {
         while ($row = $resultado->fetch_assoc()) {
-            echo "<option value='" . $row['id'] . "'>" . $row['nombre'] . "</option>";
+            echo "<option data-id= '" . $row['nombre'] . "' value='" . $row['id'] . "'>" . $row['nombre'] . "</option>";
         }
     } else {
         echo "<script>console.log('No hay nombre o hay un error');</script>";
