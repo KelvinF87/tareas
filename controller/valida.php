@@ -6,17 +6,19 @@ if (isset($_POST['login'])) {
     $password = $_POST['pass'];
     $miusuario;
     $tipo;
-    $query = "SELECT clave,nombre,tipo FROM usuarios WHERE usuario = ?";
+    $usuario;
+    $query = "SELECT clave,nombre,tipo,usuario FROM usuarios WHERE usuario = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("s", $username);
     $stmt->execute();
-    $stmt->bind_result($hashedPassword,$miusuario , $tipo);
+    $stmt->bind_result($hashedPassword,$miusuario , $tipo, $usuario);
     if ($stmt->fetch()) {
         if (password_verify($password, $hashedPassword)) {
             // echo "Login exitoso. $miusuario";
             session_start();
             $_SESSION["sNombre"] = $miusuario;
             $_SESSION["sTipo"] = $tipo;
+            $_SESSION["sUsuario"] = $usuario;
             echo"ok";
 
         } else {

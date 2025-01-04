@@ -35,10 +35,8 @@ if (!isset($_SESSION["sNombre"]) && !isset($_SESSION["sTipo"])) {
             <h2>Asignar tarea</h2>
             <form method="post">
               <label for="tarea">Tarea para</label>
-              <select name="tareaUsuario" id="tareaUsuario">
-                <option value="1">Kelvin Daniel</option>
-                <option value="2">Mama</option>
-                <option value="3">papa</option>
+              <select name="listaUsuario" id="listaUsuario">
+           
               </select>
               <button type="submit">Asignar</button>
             </form>
@@ -70,5 +68,6 @@ if (!isset($_SESSION["sNombre"]) && !isset($_SESSION["sTipo"])) {
         </div>
       </form>
     </main>
+    <script src="js/listarnombre.js"></script>
   </body>
 </html>
