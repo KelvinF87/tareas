@@ -1,7 +1,7 @@
 <?php
-$servername = "192.168.0.13";
-$username = "afs";
-$passworddb = "Str0ngP@ssw0rd!";
+$servername = "";
+$username = "";
+$passworddb = "";
 $dbname = "tareadb";
 
 // Create connection
