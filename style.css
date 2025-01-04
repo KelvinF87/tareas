@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+body{
+  background-image: url(img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background-color: rgb(68, 109, 128);
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px rgb(29, 27, 27);
+  text-align: center;
+  padding: 5px;
+}
+
+
+main {
+  width: 100%;
+  /* background-color: aquamarine; */
+  justify-items: center;
+  /* align-content: center; */
+  height: 100vh;
+  height: 100dvh;
+}
+.avatar{
+  margin-top: 5px;
+  width: 170px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px black;
+}
+label {
+  display: non;
+  font-size: 20px;
+  color: aliceblue;
+}
+form, .form {
+ 
+  background-color: rgba(82, 80, 80, 0.788);
+  /* border: solid black 2px; */
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.493);
+
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 500px;
+}
+.login{
+  background-color: rgba(82, 80, 80, 0.788);
+  margin-top: 10px !important;
+    /* border: solid black 2px; */
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.493);
+  
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+}
+button{
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.493);
+  transition: all 0.5s;
+}
+button:hover{
+  border: none;
+  box-shadow: inset 5px 10px 10px 10px rgba(1, 159, 233, 0.774);
+  cursor: pointer;
+}
+
+form input,select,.form {
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin-bottom: 7px;
+}
+
+form button, .form {
+  margin-top: 5px;
+  padding: 7px;
+}
+table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
+}
+table thead tr th {
+  padding: 5px;
+  border-bottom: solid 2px black;
+  background-color: rgb(0, 217, 255);
+}
+table tbody tr td {
+  text-align: center;
+  border: solid 1px black;
+  /* background-color: rgb(0, 217, 255); */
+  padding: 5px;
+}
+table tbody tr {
+  border-bottom: solid 2px black;
+  /* background-color: rgb(0, 217, 255); */
+}

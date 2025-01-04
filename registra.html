@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tareas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Login Tareas Día a Día</h1>
+    </header>
+    <main>
+      <!-- <img class="avatar" src="img/avatar.png" alt="" srcset=""> -->
+      <form class="login" action="">
+        <label for="">Nombre y apellidos</label>
+        <input type="text" id="nombre" placeholder="Nombre" required />
+        <label for="">Usuario</label>
+        <input type="text" id="usuario" placeholder="Usuario" required />
+        <label for="">Tipo de Usuario</label>
+        <select name="tipo" id="tipo">
+          <option value="Madre">Madre</option>
+          <option value="Padre">Padre</option>
+          <option value="Hijo">Hijo</option>
+          <option value="Hija">Hija</option>
+        </select>
+        <label for="">Contraseña</label>
+        <input type="password" id="pass" placeholder="Contraseña" required />
+        <label for="">Confirma contraseña</label>
+        <input
+          type="password"
+          id="repitepass"
+          placeholder="Confirma contraseña"
+          required
+        />
+        <button id="btnregistrousuario">Registrar</button>
+      </form>
+    </main>
+    <script src="js/registrousuario.js"></script>
+  </body>
+</html>
