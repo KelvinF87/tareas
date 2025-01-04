@@ -25,9 +25,7 @@ if (!isset($_SESSION["sNombre"]) && !isset($_SESSION["sTipo"])) {
 
     <header>
       <h1>Tareas Día a Día</h1>
-      <form method="post" action="">
-        <input type="submit" name="btnsalir" value="Salir"/>
-      </form>
+
     </header>
     <main>
     <div class="modal" id="modalAsignar">
@@ -38,36 +36,31 @@ if (!isset($_SESSION["sNombre"]) && !isset($_SESSION["sTipo"])) {
               <select name="listaUsuario" id="listaUsuario">
            
               </select>
-              <button type="submit">Asignar</button>
+            <!--  <button type="submit">Asignar</button> -->
             </form>
           </div>
     </div>
       <form method="post">
         <label for="">Añade la tarea</label>
-        <input type="text" name="tarea" placeholder="Añade tu tarea" />
-        <button type="submit">➕Añadir</button>
+        <input type="text" id="tareaText" placeholder="Añade tu tarea" />
+        <button type="submit" id="btnAddTarea">➕Añadir</button>       
+        <button type="submit" name="btnsalir">Salir</button>
+    
         
         <div>
-          <table>
-            <thead>
-              <tr>
-                <th>Actividad</th>
-                <th>Acción</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Correr 10 minutos</td>
-                <td> <button>Realizada</button> <button>Proceso</button></td>
-              </tr>
-            </tbody>
+          <table id="tareasTabla">
+         
+            
           </table>
           
           
           
-        </div>
+        </div>  
       </form>
+    
     </main>
     <script src="js/listarnombre.js"></script>
+    <script src="js/addtarea.js"></script>
+    <script src="js/listartarea.js"></script>
   </body>
 </html>

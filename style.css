@@ -52,7 +52,7 @@ form, .form {
   display: flex;
   flex-direction: column;
   width: 80%;
-  max-width: 500px;
+  max-width: 600px;
 }
 .login{
   background-color: rgba(82, 80, 80, 0.788);
