@@ -21,7 +21,11 @@ const registraTarea = async () => {
     })
       .then((response) => response.text())
       .then((data) => {
+        const tareaText = document.getElementById("tareaText");
         console.log(data);
+        tareaText.value = "";
+        tareaText.focus();
+        listarTareas();
         if (data == "err1") {
           alert("La actividad debe tener al menos 5 caracteres.");
         

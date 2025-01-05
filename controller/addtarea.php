@@ -9,9 +9,10 @@ if (isset($_POST['addtarea'])) {
         $idusuario = $_POST['idusuario'];
         $asignadapor = $_SESSION['sNombre'];
         $estado = "Pendiente";
-        $query = "INSERT INTO tareas (actividad,estado,usuario, asignada) VALUES (?, ?,?,?)";
+        // Usar NOW() para obtener la fecha y hora del servidor
+        $query = "INSERT INTO tareas (actividad,estado,usuario, asignada,fecha_creada) VALUES (?, ?,?,?,NOW())";
         $stmt = $conn->prepare($query);
-        $stmt->bind_param("ssis",$actividad, $estado, $idusuario, $asignadapor);
+        $stmt->bind_param("ssis", $actividad, $estado, $idusuario, $asignadapor);
         if ($stmt->execute()) {
             echo "Tarea registrada correctamente.";
         } else {
@@ -19,7 +20,7 @@ if (isset($_POST['addtarea'])) {
         }
         $stmt->close();
         $conn->close();
-    }else{
+    } else {
         echo "err1";
     }
 }

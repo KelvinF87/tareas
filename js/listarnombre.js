@@ -11,9 +11,10 @@ function updateButtonText() {
 setTimeout(updateButtonText, 200);
 
 // Llamar a la función cuando cambie la opción seleccionada
-document
-  .getElementById("listaUsuario")
-  .addEventListener("change", updateButtonText);
+document.getElementById("listaUsuario").addEventListener("change", (e)=>{
+e.preventDefault();
+updateButtonText();
+} );
 
 const loginUsuario = async () => {
   const listaUsuario = document.getElementById("listaUsuario");
@@ -28,7 +29,7 @@ const loginUsuario = async () => {
   })
     .then((response) => response.text())
     .then((data) => {
-      console.log(data);
+     // console.log(data);
       listaUsuario.innerHTML = data;
     })
     .catch((error) => {
